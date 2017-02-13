@@ -104,6 +104,7 @@
             this.b_ejecutar.TabIndex = 5;
             this.b_ejecutar.Text = "Ejecutar Archivo";
             this.b_ejecutar.UseVisualStyleBackColor = true;
+            this.b_ejecutar.Click += new System.EventHandler(this.b_ejecutar_Click);
             // 
             // b_reporte
             // 

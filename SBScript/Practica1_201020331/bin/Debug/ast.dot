@@ -1,0 +1,21 @@
+digraph G{
+nodo0[label="S"];
+nodo1[label="OPERACION_ARITMETICA"];
+nodo0->nodo1;
+nodo2[label="OPERACION_ARITMETICA"];
+nodo1->nodo2;
+nodo3[label="OPERACION_ARITEMTICA2"];
+nodo2->nodo3;
+nodo4[label="OPERACION_ARITMETICA3"];
+nodo3->nodo4;
+nodo5[label="5 (numero)"];
+nodo4->nodo5;
+nodo6[label="+ (Key symbol)"];
+nodo1->nodo6;
+nodo7[label="OPERACION_ARITEMTICA2"];
+nodo1->nodo7;
+nodo8[label="OPERACION_ARITMETICA3"];
+nodo7->nodo8;
+nodo9[label="3 (numero)"];
+nodo8->nodo9;
+}

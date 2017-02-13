@@ -58,6 +58,13 @@
     <Compile Include="Form_Principal.Designer.cs">
       <DependentUpon>Form_Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Graphviz\DOT_Control.cs" />
+    <Compile Include="parsers\Operation\SBSscript_Operation_Abstract.cs" />
+    <Compile Include="parsers\Operation\SBSscript_Operation_Arithmetic.cs" />
+    <Compile Include="parsers\SBSscript_actions.cs" />
+    <Compile Include="parsers\SBSscript_Constans.cs" />
+    <Compile Include="parsers\SBSscript_Grammar.cs" />
+    <Compile Include="parsers\SBSscript_Syntactic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Principal.resx">
@@ -88,7 +95,6 @@
   <ItemGroup>
     <Folder Include="errores\" />
     <Folder Include="icons\" />
-    <Folder Include="parsers\" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="WINGRAPHVIZLib">

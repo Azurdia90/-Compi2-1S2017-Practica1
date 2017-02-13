@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Practica1_201020331.parsers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+using Irony.Ast;
+using Irony.Parsing;
 
 namespace Practica1_201020331
 {
@@ -27,6 +31,7 @@ namespace Practica1_201020331
             tab_page_title = null;
         }
 
+        #region Metodos Botones
         private void b_nuevo_Click(object sender, EventArgs e)
         {
             tab_new();
@@ -46,8 +51,14 @@ namespace Practica1_201020331
             tab_delete();
         }
 
+        private void b_ejecutar_Click(object sender, EventArgs e)
+        {
+            analyse_grammar(tab_get().Text);
+        }
 
-        //METODOS GENERADOS 
+        #endregion
+
+        #region Metodos Generados
         public void tab_new()
         {
             tab_page_title = "Archivo " + (tC_entradas.TabCount + 1).ToString();
@@ -122,5 +133,30 @@ namespace Practica1_201020331
             catch (Exception) { }
         }
 
+        public void analyse_grammar(String text)
+        {
+            ParseTreeNode result_analyse = null;
+            if (text == "")
+            {
+                tB_consola.Text = "======DEBE INGRESAR UN TEXTO PARA PODER REALIZAR EL ANALISIS====";
+                return;
+            }
+
+            result_analyse = SBSscript_Syntactic.analyse(text);
+
+            if (result_analyse != null)
+            {
+                SBSscript_Syntactic.generate_image(result_analyse);
+                tB_consola.Text = SBSscript_actions.action_arithmetic(result_analyse).ToString();
+                tB_consola.Text += "\n";
+                tB_consola.Text += "=========ANALISADO CON EXITO===========";
+            }else
+            {
+                tB_consola.Text = "======EXISTEN ERRORES REVISE EL REPORTE DE ERRORES====";
+            }
+
+        }
+
+        #endregion
     }
 }
