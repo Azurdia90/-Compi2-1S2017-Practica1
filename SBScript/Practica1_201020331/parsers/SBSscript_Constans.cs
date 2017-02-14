@@ -35,6 +35,7 @@ namespace Practica1_201020331.parsers
         public static readonly int r_mostrar = 18;
         public static readonly int r_dibujar_ast = 19;
         public static readonly int r_dibujar_exp = 20;
+        public static readonly int r_void = 21;
         #endregion
 
         #region Operadores del 200 - 300
@@ -60,14 +61,45 @@ namespace Practica1_201020331.parsers
 
         #region No Terminales 300 - 400
         public static readonly int nt_S = 400;
-        public static readonly int nt_Operation_arithmetic = 401;
-        public static readonly int nt_Operation_arithmetic2 = 402;
-        public static readonly int nt_Operation_arithmetic3 = 403;
-        public static readonly int nt_Operation_arithmetic4 = 404;
+        public static readonly int nt_head = 401;
+        public static readonly int nt_head_list = 402;
+        public static readonly int nt_body = 403;
+        public static readonly int nt_define = 404;
+        public static readonly int nt_include = 405;
+        public static readonly int nt_order = 406;
+        public static readonly int nt_declare_var = 406;
+        public static readonly int nt_delcare_var = 407;
+        public static readonly int nt_var = 408;
+        public static readonly int nt_type = 409;
+        public static readonly int nt_var_list = 410;
+        public static readonly int nt_funt_main = 411;
+        public static readonly int nt_funt = 412;
+        public static readonly int nt_param = 413;
+        public static readonly int nt_funt_call = 414;
+        public static readonly int nt_funt_show = 415;
+        public static readonly int nt_funt_graph_ast = 416;
+        public static readonly int nt_funt_graph_exp = 417;
+        public static readonly int nt_string_list = 418;
+        public static readonly int nt_instruccion = 419;
+        public static readonly int nt_instruccion_list = 420;
+        public static readonly int nt_si = 421;
+        public static readonly int nt_selecciona = 422;
+        public static readonly int nt_para = 423;
+        public static readonly int nt_hasta = 424;
+        public static readonly int nt_mientras = 425;
+
+        public static readonly int nt_operation_list = 449;
+        public static readonly int nt_Operation_arithmetic = 450;
+        public static readonly int nt_Operation_arithmetic2 = 452;
+        public static readonly int nt_Operation_arithmetic3 = 453;
+        public static readonly int nt_Operation_arithmetic4 = 454;
+        
         #endregion
 
         #region Terminales 400-500
         public static readonly int t_number = 500;
+        public static readonly int t_string_sbs = 501;
+        public static readonly int t_identifier_sbs = 501;
         #endregion
 
         #region Caracteres Despreciables del 600 en adelante
@@ -78,7 +110,7 @@ namespace Practica1_201020331.parsers
         public static readonly int s_par_close = 403;
         public static readonly int s_semicolon = 404;
         public static readonly int s_doble_colon = 405;
-
+        public static readonly int s_comma = 406;
         #endregion
     }
 }

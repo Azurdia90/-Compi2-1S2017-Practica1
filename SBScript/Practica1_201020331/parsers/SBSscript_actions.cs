@@ -13,37 +13,31 @@ namespace Practica1_201020331.parsers
     {
          public static Double action_arithmetic(ParseTreeNode root)
         {
-            if(root.ToString() != )
-            return expression(root.ChildNodes.ElementAt(0));
-
+            return expression(root);
         }
 
         private static double expression(ParseTreeNode root)
         {
             switch (root.ChildNodes.Count)
             {
+                case 0:
+                    return Convert.ToDouble(root.Token.Text.ToString());
                 case 1:
-                    switch (root.ChildNodes.ElementAt(1).ToString().Substring(0, 1))
-                    {
-                        case "500":
-                            String[] numero = root.ChildNodes.ElementAt(0).ToString().Split(' ');
-                            return Convert.ToDouble(numero[0]);
-                        default:
-                            return expression(root.ChildNode);
-                    }
+                        String[] numero = root.ChildNodes.ElementAt(0).ToString().Split(' ');
+                        return Convert.ToDouble(numero[0]);    
                 case 3:
-                    switch (root.ChildNodes.ElementAt(1).ToString().Substring(0, 1))
-                    {
+                    switch (root.ChildNodes.ElementAt(1).Term.Name.ToString())
+                    { 
                         case "210":
-                            return expression(root.ChildNodes.ElementAt(0)) + expression(root.ChildNodes.ElementAt(3));
+                            return expression(root.ChildNodes.ElementAt(0)) + expression(root.ChildNodes.ElementAt(2));
                         case "211":
-                            return expression(root.ChildNodes.ElementAt(0)) - expression(root.ChildNodes.ElementAt(3));
+                            return expression(root.ChildNodes.ElementAt(0)) - expression(root.ChildNodes.ElementAt(2));
                         case "212":
-                            return expression(root.ChildNodes.ElementAt(0)) * expression(root.ChildNodes.ElementAt(3));
+                            return expression(root.ChildNodes.ElementAt(0)) * expression(root.ChildNodes.ElementAt(2));
                         case "213":
-                            return expression(root.ChildNodes.ElementAt(0)) / expression(root.ChildNodes.ElementAt(3));
-                        case "215":
-                            return Math.Pow(expression(root.ChildNodes.ElementAt(0)), expression(root.ChildNodes.ElementAt(3)));
+                            return expression(root.ChildNodes.ElementAt(0)) / expression(root.ChildNodes.ElementAt(2));
+                        case "214":
+                            return Math.Pow(expression(root.ChildNodes.ElementAt(0)), expression(root.ChildNodes.ElementAt(2)));
                         default:
                             return expression(root.ChildNodes.ElementAt(1));
                     }

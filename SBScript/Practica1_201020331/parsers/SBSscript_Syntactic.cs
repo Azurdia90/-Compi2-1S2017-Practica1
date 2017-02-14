@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Irony.Ast;
 using Irony.Parsing;
+using System.Windows.Forms;
 
 namespace Practica1_201020331.parsers
 {
@@ -27,6 +28,14 @@ namespace Practica1_201020331.parsers
             WINGRAPHVIZLib.DOT dot_new = new WINGRAPHVIZLib.DOT();
             WINGRAPHVIZLib.BinaryImage img_new = dot_new.ToPNG(dot_Graph);
             img_new.Save("AST.png");
+        }
+
+        public static void path(ParseTreeNode root,TextBox consola)
+        {
+            foreach(var ChildNode in root.ChildNodes)
+            {
+                
+            }
         }
 
         public static void generate_error_report(ParseTreeNode root)
