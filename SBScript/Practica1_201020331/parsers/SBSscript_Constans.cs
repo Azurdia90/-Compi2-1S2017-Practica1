@@ -36,6 +36,7 @@ namespace Practica1_201020331.parsers
         public static readonly int r_dibujar_ast = 19;
         public static readonly int r_dibujar_exp = 20;
         public static readonly int r_void = 21;
+        public static readonly int r_value = 22;
         #endregion
 
         #region Operadores del 200 - 300
@@ -56,6 +57,10 @@ namespace Practica1_201020331.parsers
         public static readonly int s_xor = 222;
         public static readonly int s_not = 223;
         public static readonly int s_similar = 230;
+        public static readonly int s_doble_plus = 231;
+        public static readonly int s_doble_less = 232;
+        public static readonly int s_comparation = 233;
+        public static readonly int s_equiavlent = 234;
 
         #endregion
 
@@ -83,16 +88,21 @@ namespace Practica1_201020331.parsers
         public static readonly int nt_instruccion = 419;
         public static readonly int nt_instruccion_list = 420;
         public static readonly int nt_si = 421;
-        public static readonly int nt_selecciona = 422;
-        public static readonly int nt_para = 423;
-        public static readonly int nt_hasta = 424;
-        public static readonly int nt_mientras = 425;
-
+        public static readonly int nt_select = 422;
+        public static readonly int nt_value_list = 423;
+        public static readonly int nt_value = 424;
+        public static readonly int nt_para = 425;
+        public static readonly int nt_hasta = 426;
+        public static readonly int nt_mientras = 427;
+        public static readonly int nt_op = 428;
+        public static readonly int nt_instruccion_adicional = 429;
+        public static readonly int nt_return = 430;
         public static readonly int nt_operation_list = 449;
         public static readonly int nt_Operation_arithmetic = 450;
         public static readonly int nt_Operation_arithmetic2 = 452;
         public static readonly int nt_Operation_arithmetic3 = 453;
         public static readonly int nt_Operation_arithmetic4 = 454;
+        public static readonly int nt_Comentario = 455;
         
         #endregion
 
