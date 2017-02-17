@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Irony.Ast;
 using Irony.Parsing;
 using System.Windows.Forms;
+using Practica1_201020331.parsers.Table_Symbols;
 
 namespace Practica1_201020331.parsers
 {
@@ -30,11 +31,29 @@ namespace Practica1_201020331.parsers
             img_new.Save("AST.png");
         }
 
-        public static void path(ParseTreeNode root,TextBox consola)
+        public static void write_table(ParseTreeNode root)
         {
-            foreach(var ChildNode in root.ChildNodes)
+            
+            foreach (ParseTreeNode node_child_aux in root.ChildNodes)
             {
+                switch (node_child_aux.Term.Name.ToString())
+                {
+                    case "411" :
+                        SBSscript_Function function_main = new SBSscript_Function("Principal", -1, node_child_aux.ChildNodes.ElementAt(1), false, true);
+                        SBSscript_Table_Symbols.GetInstance().var_function_list.Add(function_main);
+                        break;
+
+                }                
                 
+                write_table(node_child_aux);
+                              
+            }
+        }
+
+        public static void test_table_symbols()
+        {
+            foreach(SBSscript_Function function_aux in SBSscript_Table_Symbols.GetInstance().var_function_list){
+                MessageBox.Show(function_aux.var_name.ToString());
             }
         }
 

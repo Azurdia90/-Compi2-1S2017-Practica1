@@ -65,6 +65,9 @@
     <Compile Include="parsers\SBSscript_Constans.cs" />
     <Compile Include="parsers\SBSscript_Grammar.cs" />
     <Compile Include="parsers\SBSscript_Syntactic.cs" />
+    <Compile Include="parsers\Table_Symbols\SBSscript_Function.cs" />
+    <Compile Include="parsers\Table_Symbols\SBSscript_Table_Symbols.cs" />
+    <Compile Include="parsers\Table_Symbols\SBSscript_Variable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Principal.resx">

@@ -147,7 +147,8 @@ namespace Practica1_201020331
             if (result_analyse != null)
             {
                 SBSscript_Syntactic.generate_image(result_analyse);
-                SBSscript_Syntactic.path(result_analyse,tB_consola);
+                SBSscript_Syntactic.write_table(result_analyse);
+                SBSscript_Syntactic.test_table_symbols();
                 tB_consola.Text += "\n";
                 tB_consola.Text += "=========ANALISADO CON EXITO===========";
             }else

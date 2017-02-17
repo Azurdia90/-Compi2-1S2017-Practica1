@@ -265,7 +265,7 @@ namespace Practica1_201020331.parsers
 
             #region Otros
             this.Root = S;
-            MarkPunctuation(s_semi_colon, s_comma, s_par_open, s_par_close, s_key_close, s_key_close, s_equal, s_doble_dot);
+            MarkPunctuation(s_semi_colon, s_comma, s_par_open, s_par_close, s_key_open, s_key_close, s_equal, s_doble_dot);
             base.NonGrammarTerminals.Add(sbs_commnet);
             base.NonGrammarTerminals.Add(sbs_comment_multi);
             #endregion
